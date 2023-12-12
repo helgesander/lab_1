@@ -57,12 +57,13 @@ void ReadPersonData(string& name, unsigned short& age, unsigned short& height, u
 	
 }
 
-void WritePersonData(const unsigned short* age,const string& name,const string& weight,const string& height)
+void WritePersonData(const unsigned short* age, const string& name, const string& weight, const string& height)
 {
 	cout << "Name: " << name << "\nWeight: " << weight << "\nHeight: " << height << endl;
 	cout << "Age: " << *age << "\nSalary: " << to_string(salary);
 }
 
+#ifndef DO_NOT_DEFINE_MAIN
 int main()
 {
 	string name;
@@ -75,3 +76,4 @@ int main()
 	WritePersonData(&age, name,to_string(weight), to_string(height));
     return 0;
 }
+#endif
